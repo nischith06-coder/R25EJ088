@@ -1,8 +1,6 @@
+
 #include <stdio.h>
 #include <stdlib.h>
-
-#define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "stb_image_write.h"
 
 #define WIDTH 60
 #define HEIGHT 25
@@ -76,7 +74,7 @@ void drawLine(int x1, int y1, int x2, int y2)
         int e2 = 2 * err;
 
         if(e2 > -dy)
-                {
+        {
             err -= dy;
             x1 += sx;
         }
@@ -115,55 +113,10 @@ void drawTriangle(int x1, int y1,
     drawLine(x3, y3, x1, y1);
 }
 
-void savePNG(const char *filename)
-{
-    unsigned char *image =
-        (unsigned char *)malloc(WIDTH * HEIGHT * 3);
-
-    if(image == NULL)
-    {
-        printf("Memory allocation failed!\n");
-        return;
-    }
-
-    for(int y = 0; y < HEIGHT; y++)
-    {
-        for(int x = 0; x < WIDTH; x++)
-        {
-            int index = (y * WIDTH + x) * 3;
-
-            if(canvas[y][x] == '_')
-            {
-                image[index]     = 255;
-                image[index + 1] = 255;
-                image[index + 2] = 255;
-            }
-            else
-            {
-                image[index]     = 0;
-                image[index + 1] = 0;
-                image[index + 2] = 0;
-            }
-        }
-    }
-
-    stbi_write_png(
-        filename,
-        WIDTH,
-        HEIGHT,
-        3,
-        image,
-        WIDTH * 3
-    );
-
-    free(image);
-
-    printf("\nPNG saved as %s\n", filename);
-}
-
 int main()
 {
     int choice;
+    int x1, y1, x2, y2, x3, y3, r;
 
     do
     {
@@ -178,9 +131,7 @@ int main()
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        int x1, y1, x2, y2;
-        int x3, y3, r;
-                switch(choice)
+        switch(choice)
         {
             case 1:
                 clearCanvas();
@@ -195,10 +146,8 @@ int main()
 
                 drawRectangle(x1, y1, x2, y2);
 
+                printf("\nRectangle Drawn Successfully!\n\n");
                 displayCanvas();
-
-                savePNG("rectangle.png");
-
                 break;
 
             case 2:
@@ -214,10 +163,8 @@ int main()
 
                 drawLine(x1, y1, x2, y2);
 
+                printf("\nLine Drawn Successfully!\n\n");
                 displayCanvas();
-
-                savePNG("line.png");
-
                 break;
 
             case 3:
@@ -232,10 +179,8 @@ int main()
 
                 drawCircle(x1, y1, r);
 
+                printf("\nCircle Drawn Successfully!\n\n");
                 displayCanvas();
-
-                savePNG("circle.png");
-
                 break;
 
             case 4:
@@ -250,36 +195,29 @@ int main()
                       &x2, &y2,
                       &x3, &y3);
 
-                drawTriangle(
-                    x1, y1,
-                    x2, y2,
-                    x3, y3
-                );
+                drawTriangle(x1, y1, x2, y2, x3, y3);
 
+                printf("\nTriangle Drawn Successfully!\n\n");
                 displayCanvas();
-
-                savePNG("triangle.png");
-
                 break;
 
             case 5:
                 clearCanvas();
 
-                printf("Canvas Cleared\n");
-
+                printf("\nCanvas Cleared!\n\n");
                 displayCanvas();
-
                 break;
 
             case 0:
-                printf("Exiting Program...\n");
+                printf("\nExiting Program...\n");
                 break;
 
             default:
-                printf("Invalid Choice!\n");
+                printf("\nInvalid Choice!\n");
         }
 
     } while(choice != 0);
 
     return 0;
 }
+
