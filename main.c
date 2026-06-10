@@ -5,6 +5,7 @@
 #define HEIGHT 100
 #define MAX_SHAPES 100
 
+
 char canvas[HEIGHT][WIDTH];
 
 typedef struct
@@ -40,6 +41,20 @@ void displayCanvas()
     for(int i=0;i<HEIGHT;i++)
     {
         for(int j=0;j<WIDTH;j++)
+        {
+            printf("%c",canvas[i][j]);
+        }
+        printf("\n");
+    }
+}
+#define SMALL_WIDTH 60
+#define SMALL_HEIGHT 25
+
+void displaySmallCanvas()
+{
+    for(int i=0;i<SMALL_HEIGHT;i++)
+    {
+        for(int j=0;j<SMALL_WIDTH;j++)
         {
             printf("%c",canvas[i][j]);
         }
@@ -309,8 +324,7 @@ int main()
                     s.x2,s.y2);
 
                 printf("\nRectangle Added Successfully!\n\n");
-                displayCanvas();
-
+                displaySmallCanvas();
                 break;
             }
 
@@ -340,7 +354,7 @@ int main()
                     s.x2,s.y2);
 
                 printf("\nLine Added Successfully!\n\n");
-                displayCanvas();
+                displaySmallCanvas();
 
                 break;
             }
@@ -373,7 +387,7 @@ int main()
                     s.radius);
 
                 printf("\nCircle Added Successfully!\n\n");
-                displayCanvas();
+                displaySmallCanvas();
 
                 break;
             }
@@ -406,7 +420,7 @@ int main()
                     s.x3,s.y3);
 
                 printf("\nTriangle Added Successfully!\n\n");
-                displayCanvas();
+                displaySmallCanvas();
 
                 break;
             }
