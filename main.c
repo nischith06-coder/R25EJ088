@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #define WIDTH 60
-#define HEIGHT 25
+#define HEIGHT 100
 #define MAX_SHAPES 100
 
 char canvas[HEIGHT][WIDTH];
@@ -430,12 +430,59 @@ int main()
             }
 
             case 8:
-            {
-                redrawCanvas();
-                displayCanvas();
-                break;
-            }
+{
+    clearCanvas();
 
+    for(int i=0;i<shapeCount;i++)
+    {
+        drawChar = shapes[i].symbol;
+
+        int startY = 2 + (i * 15);
+
+        switch(shapes[i].type)
+        {
+            case 1:
+                drawRectangle(
+                    5,
+                    startY,
+                    25,
+                    startY + 10
+                );
+                break;
+
+            case 2:
+                drawLine(
+                    5,
+                    startY,
+                    25,
+                    startY + 10
+                );
+                break;
+
+            case 3:
+                drawCircle(
+                    15,
+                    startY + 5,
+                    4
+                );
+                break;
+
+            case 4:
+                drawTriangle(
+                    5,
+                    startY + 10,
+                    15,
+                    startY,
+                    25,
+                    startY + 10
+                );
+                break;
+        }
+    }
+
+    displayCanvas();
+    break;
+}
             case 9:
             {
                 displayObjects();
