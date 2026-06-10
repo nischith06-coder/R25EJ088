@@ -1,6 +1,6 @@
 # 🎨 2D Graphics Editor in C
 
-A simple menu-driven **2D Graphics Editor** developed in **C Programming** using a **2D Character Array**. The program allows users to draw various geometric shapes on a virtual canvas using custom characters and user-defined coordinates.
+A menu-driven **2D Graphics Editor** developed in **C Programming** using a **2D Character Array**. The application allows users to draw and manage geometric shapes on a virtual canvas using custom characters and user-defined coordinates.
 
 ---
 
@@ -18,9 +18,19 @@ A simple menu-driven **2D Graphics Editor** developed in **C Programming** using
 
 ✅ User-Defined Coordinates
 
-✅ Clear Canvas
+✅ Add Object
 
-✅ Display Canvas
+✅ Delete Object
+
+✅ Modify Object
+
+✅ Display Object List
+
+✅ Display Current Canvas
+
+✅ Display All Stored Objects
+
+✅ Clear Canvas
 
 ✅ Menu-Driven Interface
 
@@ -32,25 +42,10 @@ A simple menu-driven **2D Graphics Editor** developed in **C Programming** using
 
 * C Programming Language
 * Arrays
+* Structures
 * Functions
 * Console Graphics
 * GCC Compiler
-
----
-
-## 🚀 How to Compile
-
-### Using GCC
-
-```bash
-gcc main.c -o editor
-```
-
-### Run
-
-```bash
-editor
-```
 
 ---
 
@@ -59,11 +54,16 @@ editor
 ```text
 ===== 2D GRAPHICS EDITOR =====
 
-1. Draw Rectangle
-2. Draw Line
-3. Draw Circle
-4. Draw Triangle
-5. Clear Canvas
+1. Add Rectangle
+2. Add Line
+3. Add Circle
+4. Add Triangle
+5. Delete Object
+6. Modify Object
+7. Display Current Canvas
+8. Display All Stored Objects
+9. Display Object List
+10. Clear All Objects
 0. Exit
 ```
 
@@ -117,28 +117,61 @@ ________#___________
 1. User selects a shape.
 2. User enters a drawing character.
 3. User enters the required coordinates.
-4. The shape is rendered on the canvas.
-5. The canvas is displayed in the console window.
+4. The object is stored in memory.
+5. The selected shape is displayed on the canvas.
+6. Users can modify or delete stored objects.
+7. All stored objects can be displayed together on the canvas.
 
 ---
 
 ## 🎯 Learning Outcomes
 
 * Understanding 2D Arrays
+* Structure-Based Data Storage
 * Graphics Representation Using Characters
 * Function-Based Program Design
 * Coordinate-Based Drawing
 * Basic Computer Graphics Concepts
 * Menu-Driven Programming
+* Object Management Techniques
 
 ---
 
 ## 🔮 Future Enhancements
 
-* Add Object Storage
-* Delete Objects
-* Modify Objects
-* Save Canvas to Image
-* Colored Output
-* GUI Version using ncurses
-* Mouse Support
+* Save Canvas as PNG Image
+* Colored Graphics Support
+* ncurses-Based GUI
+* Mouse Interaction
+* Shape Rotation
+* Shape Scaling
+* Fill Algorithms
+* Undo / Redo Operations
+
+---
+
+## 📋 Assignment Requirements Covered
+
+✔ Use of 2D Character Array
+
+✔ Draw Rectangle
+
+✔ Draw Line
+
+✔ Draw Circle
+
+✔ Draw Triangle
+
+✔ Add Objects
+
+✔ Delete Objects
+
+✔ Modify Objects
+
+✔ Display Picture
+
+✔ Menu-Driven Interface
+
+✔ GitHub Repository Submission
+
+✔ Documentation and Screenshots
