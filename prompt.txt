@@ -1,0 +1,40 @@
+2D Graphics Editor Development Log
+#Prompt 1
+
+User Request:
+Problem Statement:
+Write a 2D graphics editor using * and _.
+
+Write functions to draw a circle, rectangle, line, and triangle.
+You should be able to:
+- add objects to the picture
+- delete objects from the picture
+- modify objects in the picture
+
+Use a 2D array of characters to store the picture.
+Write a function to display the picture.
+
+Implementation:
+Created:
+- drawRectangle()
+- drawLine()
+- drawCircle()
+- drawTriangle()
+- clearCanvas()
+- displayCanvas()
+
+# Prompt 2
+
+User Request
+Create GitHub repository and maintain daily commits.
+
+Implementation
+Repository Created
+Initial Commit Completed
+Daily Push Strategy Planned.
+
+#Prompt 3
+
+User Request
+Give full main.c code
+
