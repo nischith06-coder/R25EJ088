@@ -1,11 +1,15 @@
-2D Graphics Editor Development Log
-#Prompt 1
+# 📘 2D Graphics Editor - Development Log
 
-User Request:
+## Prompt 1
+
+### User Input
+
+```text
 Problem Statement:
 Write a 2D graphics editor using * and _.
 
 Write functions to draw a circle, rectangle, line, and triangle.
+
 You should be able to:
 - add objects to the picture
 - delete objects from the picture
@@ -13,28 +17,450 @@ You should be able to:
 
 Use a 2D array of characters to store the picture.
 Write a function to display the picture.
+```
 
-Implementation:
+### Output / Implementation
+
+Implemented:
+
+* 2D Character Canvas
+* Rectangle Drawing
+* Line Drawing
+* Circle Drawing
+* Triangle Drawing
+* Display Function
+* Object Management Design
+
+---
+
+## Prompt 2
+
+### User Input
+
+```text
+I have only 3 days left.
+```
+
+### Output
+
+Recommended:
+
+* Finish core functionality first
+* Create GitHub repository
+* Push daily commits
+* Add README and screenshots
+* Leave advanced features for later
+
+---
+
+## Prompt 3
+
+### User Input
+
+```text
+Should I use GitHub Desktop or GitHub?
+```
+
+### Output
+
+Recommended:
+
+* GitHub Desktop
+* Easier commits
+* Easier pushes
+* Visual interface
+
+---
+
+## Prompt 4
+
+### User Input
+
+```text
+Give full main.c
+```
+
+### Output
+
 Created:
-- drawRectangle()
-- drawLine()
-- drawCircle()
-- drawTriangle()
-- clearCanvas()
-- displayCanvas()
 
-# Prompt 2
+* Menu Driven Interface
+* Rectangle Drawing
+* Line Drawing
+* Circle Drawing
+* Triangle Drawing
+* Clear Canvas
+* Display Canvas
 
-User Request
-Create GitHub repository and maintain daily commits.
+---
 
-Implementation
-Repository Created
-Initial Commit Completed
-Daily Push Strategy Planned.
+## Prompt 5
 
-#Prompt 3
+### User Input
 
-User Request
-Give full main.c code
+```text
+Make it separate.
+```
 
+### Output
+
+Implemented:
+
+```c
+clearCanvas();
+```
+
+before drawing each shape.
+
+Result:
+
+* Rectangle displayed separately
+* Line displayed separately
+* Circle displayed separately
+* Triangle displayed separately
+
+---
+
+## Prompt 6
+
+### User Input
+
+```text
+I need it to ask which character should be used.
+```
+
+### Output
+
+Implemented:
+
+```c
+char drawChar;
+```
+
+User can draw using:
+
+```text
+#
+@
+*
+$
+%
+&
+```
+
+---
+
+## Prompt 7
+
+### User Input
+
+```text
+Allow user coordinates.
+```
+
+### Output
+
+Implemented coordinate-based drawing.
+
+Rectangle:
+
+```text
+x1 y1 x2 y2
+```
+
+Line:
+
+```text
+x1 y1 x2 y2
+```
+
+Circle:
+
+```text
+centerX centerY radius
+```
+
+Triangle:
+
+```text
+x1 y1 x2 y2 x3 y3
+```
+
+---
+
+## Prompt 8
+
+### User Input
+
+```text
+Create PNG automatically.
+```
+
+### Output
+
+Explored:
+
+```text
+stb_image_write.h
+```
+
+Implemented:
+
+```c
+savePNG()
+```
+
+for automatic image generation.
+
+Generated:
+
+* rectangle.png
+* line.png
+* circle.png
+* triangle.png
+
+---
+
+## Prompt 9
+
+### User Input
+
+```text
+Rectangle is going infinite.
+```
+
+### Output
+
+Identified issue:
+
+```c
+#define WIDTH 600
+#define HEIGHT 250
+```
+
+Large canvas size produced excessive console output.
+
+Recommended:
+
+```c
+#define WIDTH 60
+#define HEIGHT 25
+```
+
+for console display.
+
+---
+
+## Prompt 10
+
+### User Input
+
+```text
+Forget PNG.
+```
+
+### Output
+
+Returned to console-based graphics editor.
+
+Focus:
+
+* Shape Drawing
+* Character Selection
+* Coordinate Input
+* Canvas Display
+
+---
+
+## Prompt 11
+
+### User Input
+
+```text
+Create graphics.c and graphics.h
+```
+
+### Output
+
+Suggested modular structure:
+
+```text
+main.c
+graphics.c
+graphics.h
+README.md
+```
+
+---
+
+## Prompt 12
+
+### User Input
+
+```text
+Create attractive README.
+```
+
+### Output
+
+Created professional documentation including:
+
+* Features
+* Technologies Used
+* Menu Options
+* Sample Outputs
+* Learning Outcomes
+* Future Enhancements
+
+---
+
+## Prompt 13
+
+### User Input
+
+```text
+What next?
+```
+
+### Output
+
+Suggested:
+
+* GitHub Commit
+* Push Changes
+* Add Screenshots
+* Improve README
+* Verify Assignment Requirements
+
+---
+
+## Prompt 14
+
+### User Input
+
+```text
+Add Object, Delete Object, Modify Object.
+```
+
+### Output
+
+Designed:
+
+```c
+typedef struct
+{
+    int type;
+    char symbol;
+
+    int x1, y1;
+    int x2, y2;
+    int x3, y3;
+
+    int radius;
+} Shape;
+```
+
+Implemented:
+
+* Object Storage
+* Object Deletion
+* Object Modification
+* Object Listing
+
+---
+
+## Prompt 15
+
+### User Input
+
+```text
+I created a separate file for object manager.
+```
+
+### Output
+
+Suggested repository structure:
+
+```text
+main.c
+object_manager.c
+README.md
+screenshots/
+```
+
+---
+
+## Prompt 16
+
+### User Input
+
+```text
+Merge object manager into main.c.
+```
+
+### Output
+
+Implemented:
+
+* Shape Structure
+* Shape Array Storage
+* Add Rectangle
+* Add Line
+* Add Circle
+* Add Triangle
+* Delete Object
+* Modify Object
+* Display Object List
+* Display All Stored Objects
+
+---
+
+## Prompt 17
+
+### User Input
+
+```text
+Store shapes but display only current shape while adding.
+```
+
+### Output
+
+Implemented hybrid behavior:
+
+* Shape stored in memory
+* Current shape displayed immediately
+* Display All Objects option redraws all stored shapes
+
+---
+
+# ✅ Final Project Features
+
+* Draw Rectangle
+* Draw Line
+* Draw Circle
+* Draw Triangle
+* Custom Drawing Character
+* User Coordinate Input
+* 2D Character Canvas
+* Menu Driven Interface
+* Add Object
+* Delete Object
+* Modify Object
+* Display Object List
+* Display Current Canvas
+* Display All Stored Objects
+* Clear Canvas
+* GitHub Repository
+* README Documentation
+* Screenshots
+
+---
+
+# 📌 Final Repository Contents
+
+```text
+main.c
+README.md
+screenshots/
+PROJECT_DEVELOPMENT_LOG.md
+```
